@@ -1,0 +1,30 @@
+<div>
+    <span *ngFor="let r of requests">
+        <!-- <span>{{r.adharid}} {{r.emailid}}</span>
+        <input type="button" value="DENY REQUEST" (click)="denyRequest(r.adharid)"/>
+        <input type="button" value="APPROVE REQUEST" (click)="approvereq(r)"/> -->
+        <div class="container">
+            <table class="table">
+                <tr>
+                    <th>Email ID</th>
+                    <th>Name</th>&nbsp;&nbsp;&nbsp;
+                    <th>Age</th>&nbsp;
+                    <th>Address</th>&nbsp;
+                    <th>Aadhar ID</th>
+                </tr>
+             
+                <tr>
+                    <td>{{r.emailid}}</td>
+                    <td>{{r.name}}</td>&nbsp;
+                    <td>{{r.age}}</td>&nbsp;
+                    <td>{{r.address}}</td>&nbsp;
+                    <td>{{r.adharid}}</td>
+                    <td>
+                        <input type="button" value="ISSUED AADHAR CARD"/></td>
+                </tr>
+            </table>
+            <hr>
+        </div>
+    </span>
+
+</div>

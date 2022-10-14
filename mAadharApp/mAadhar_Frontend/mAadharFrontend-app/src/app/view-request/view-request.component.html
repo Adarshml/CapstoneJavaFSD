@@ -1,0 +1,49 @@
+<div>
+    <div *ngIf="flag">
+        <h2>Approve Application</h2><br>
+        <form (ngSubmit)="saveReqtoDB()">
+            <label>Adharid</label>
+            <input type="text" name="adharid" [(ngModel)]="adharid" readonly>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Email</label>
+            <input type="text" name="emailid" [(ngModel)]="emailid" readonly><br/><br>
+            <label>Name</label>
+            <input type="text" name="name" [(ngModel)]="name" readonly>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Age</label>
+            <input type="number" name="age" [(ngModel)]="age" readonly>&nbsp;&nbsp;&nbsp;&nbsp;
+            <label>Address</label>
+            <input type="text" name="address" [(ngModel)]="address" readonly><br/><br>
+            <input type="submit" class="btn btn-success" value="Approve Request"/>&nbsp;&nbsp;
+            <input type="reset" class="btn btn-dark" value="reset"/><br/>
+        </form><br/>
+    </div>
+    <span *ngFor="let r of requests">
+        <!-- <span>{{r.adharid}} {{r.emailid}}</span>
+        <input type="button" value="DENY REQUEST" (click)="denyRequest(r.adharid)"/>
+        <input type="button" value="APPROVE REQUEST" (click)="approvereq(r)"/> -->
+        <div class="container">
+            <table class="table">
+                <tr>
+                    <th>Email ID</th>
+                    <th>Name</th>&nbsp;&nbsp;&nbsp;
+                    <th>Age</th>&nbsp;
+                    <th>Address</th>&nbsp;
+                    <th>Aadhar ID</th>
+                </tr>
+                <br>
+                <tr>
+                    <td>{{r.emailid}}</td>
+                    <td>{{r.name}}</td>&nbsp;
+                    <td>{{r.age}}</td>&nbsp;
+                    <td>{{r.address}}</td>&nbsp;
+                    <td>{{r.adharid}}</td>
+                    <td><input type="button" value="DENY REQUEST" (click)="denyRequest(r.adharid)"/>&nbsp;&nbsp;&nbsp;
+                        <input type="button" value="APPROVE REQUEST" (click)="approvereq(r)"/></td>
+                </tr>
+            </table>
+            <hr><br>
+        
+        </div>
+    </span>
+    <br/><br>
+    <span style="color:red">{{msg}}</span>
+</div>

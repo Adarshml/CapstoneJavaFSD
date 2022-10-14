@@ -1,0 +1,18 @@
+<div>
+    <h2>Apply for Aadhar Card</h2><br>
+    <form [formGroup]="reqRef" (ngSubmit)="storeRequest()">
+        <!-- <label>Adharid</label>
+        <input type="text" formControlName="adharid"><br/> -->
+        <label>Email</label>&nbsp;&nbsp;
+        <input type="text" formControlName="emailid"><br/><br>
+        <label>Name</label>&nbsp;&nbsp;
+        <input type="text" formControlName="name"><br/><br>
+        <label>Age</label>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="number" formControlName="age"><br/><br>
+        <label>Address</label>&nbsp;
+        <input type="text" formControlName="address"><br/><br>
+        <input type="submit" class="btn btn-success" value="APPLY"/>&nbsp;&nbsp;&nbsp;
+        <input type="reset" class="btn btn-dark" value="RESET"/><br/>
+    </form><br/>
+    <span style="color:red">{{storeMsg}}</span>
+</div>

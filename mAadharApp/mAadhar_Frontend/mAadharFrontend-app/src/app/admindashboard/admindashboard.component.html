@@ -1,0 +1,12 @@
+<div>
+    <h2>Welcome to home page admin {{user}}</h2>
+    <a routerLink="viewReq" class="link-success">View All Request</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a routerLink="viewall" class="link-success">Display all issued Aadhaar Card</a>
+    <br/>
+    <hr/>
+        <router-outlet></router-outlet>
+    <hr/>
+  
+    <br/>
+    <input type="button" class="btn btn-dark" value="logout" (click)="logout()"/>
+</div>

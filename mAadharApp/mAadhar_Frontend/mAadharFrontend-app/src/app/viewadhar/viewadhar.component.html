@@ -1,0 +1,28 @@
+<div>
+   <div>
+   <img src="../../assets/adharimg.jpeg" alt="" srcset="">
+   <div class="centered"><h4>Name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{myadhar.name}}</h4></div>
+   <div class="centered1"><h4>Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{myadhar.age}}</h4></div>
+   <div class="centered2"><h4>Address:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{myadhar.address}}</h4></div>
+   <div class="centered3"><h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{myadhar.adharid}}</h6></div>
+</div>
+<br>
+<span style="color:green">{{msg}}</span><br>
+<input type="button"class="btn btn-info" value="Update My Aadhar" (click)="approvereq(myadhar)"/><br><br>
+<div *ngIf="flag">
+    <form (ngSubmit)="saveReqtoDB()">
+        <label>Adharid</label>&nbsp;&nbsp;
+        <input type="text" name="adharid" [(ngModel)]="myadhar.adharid" readonly>&nbsp;&nbsp;&nbsp;
+        <label>Email</label>&nbsp;&nbsp;
+        <input type="text" name="emailid" [(ngModel)]="myadhar.emailid" readonly><br/><br>
+        <label>Name</label>&nbsp;&nbsp;
+        <input type="text" name="name" [(ngModel)]="myadhar.name">&nbsp;&nbsp;&nbsp;
+        <label>Age</label>&nbsp;&nbsp;
+        <input type="number" name="age" [(ngModel)]="myadhar.age">&nbsp;&nbsp;&nbsp;
+        <label>Address</label>&nbsp;&nbsp;
+        <input type="text" name="address" [(ngModel)]="myadhar.address"><br/><br>
+        <input type="submit" class="btn btn-info" value="Update"/>&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="reset" class="btn btn-dark" value="reset"/><br/>
+    </form><br/>
+</div>
+</div>

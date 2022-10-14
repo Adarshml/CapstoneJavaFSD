@@ -1,0 +1,20 @@
+<div>
+    <h3>Create Account</h3>
+    <form [formGroup]="signUpRef" (ngSubmit)="signUp()">
+        <label>EmailId </label>&nbsp;
+        <input type="email" formControlName="emailid"/><br/><br>
+        <label>Password </label>&nbsp;
+        <input type="password" formControlName="password"/><br/><br>
+        <label>Type Of User</label>&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="typeOfUser" value="admin" formControlName="typeOfUser"/>Admin&nbsp;
+        <input type="radio" name="typeOfUser" value="user" formControlName="typeOfUser"/>User<br/><br>
+        <input type="submit" class="btn btn-success" value="SIGNUP">&nbsp;
+        <input type="reset" class="btn btn-dark" value="RESET">
+    </form>
+    <a href="javascript:void(0)" (click)="goBack()">
+        <-- Go to Login Page
+      </a>
+    <br/><br>
+    <span style="color:red">{{msg}}</span>
+    <span style="color:green;">{{user}}</span>
+</div>
